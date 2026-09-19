@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Academic portfolio of Dr. Gouranga Duari, Assistant Professor and researcher in machine learning, outlier detection, and data science.">
+  <meta name="author" content="Dr. Gouranga Duari">
+  <title>Dr. Gouranga Duari | Academic Portfolio</title>
+  <style>
+    :root {
+      --ink: #18232f;
+      --muted: #5b6773;
+      --accent: #185b82;
+      --line: #dce3e8;
+      --soft: #f4f7f9;
+      --white: #ffffff;
+      --width: 1080px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--white);
+      font-family: Inter, "Segoe UI", Roboto, Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.65;
+    }
+
+    a { color: var(--accent); text-decoration: none; }
+    a:hover, a:focus { text-decoration: underline; }
+    .container { width: min(calc(100% - 40px), var(--width)); margin: 0 auto; }
+
+    header {
+      padding: 26px 0;
+      border-bottom: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.97);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    nav { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .brand { color: var(--ink); font-weight: 700; letter-spacing: 0.01em; }
+    .nav-links { display: flex; flex-wrap: wrap; gap: 20px; font-size: 0.92rem; }
+    .nav-links a { color: var(--muted); }
+
+    .hero { padding: 90px 0 72px; background: var(--soft); border-bottom: 1px solid var(--line); }
+    .hero-grid { display: grid; grid-template-columns: 1.5fr 0.8fr; gap: 60px; align-items: center; }
+    .eyebrow { margin: 0 0 12px; color: var(--accent); font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.8rem; }
+    h1 { margin: 0; font-family: Georgia, "Times New Roman", serif; font-size: clamp(2.5rem, 6vw, 4.5rem); line-height: 1.06; letter-spacing: -0.025em; }
+    .lead { max-width: 720px; margin: 24px 0 30px; color: var(--muted); font-size: 1.15rem; }
+    .actions { display: flex; flex-wrap: wrap; gap: 12px; }
+    .button { display: inline-block; padding: 10px 17px; border: 1px solid var(--accent); border-radius: 4px; font-weight: 650; }
+    .button.primary { color: var(--white); background: var(--accent); }
+    .button.secondary { color: var(--accent); background: transparent; }
+    .quick-info { margin: 0; padding: 24px; list-style: none; border-left: 3px solid var(--accent); background: var(--white); }
+    .quick-info li + li { margin-top: 12px; }
+    .quick-info strong { display: block; font-size: 0.76rem; text-transform: uppercase; letter-spacing: 0.07em; color: var(--muted); }
+
+    main section { padding: 74px 0; border-bottom: 1px solid var(--line); }
+    .section-grid { display: grid; grid-template-columns: 220px 1fr; gap: 54px; }
+    h2 { margin: 0; font-family: Georgia, "Times New Roman", serif; font-size: 2rem; line-height: 1.2; }
+    h3 { margin: 0 0 5px; font-size: 1.08rem; line-height: 1.4; }
+    p { margin: 0 0 14px; }
+    .muted, .meta { color: var(--muted); }
+    .meta { font-size: 0.91rem; }
+    .entry + .entry { margin-top: 30px; padding-top: 30px; border-top: 1px solid var(--line); }
+    .entry-head { display: flex; justify-content: space-between; gap: 24px; }
+    .entry-head .meta { white-space: nowrap; }
+    .list { margin: 14px 0 0; padding-left: 20px; }
+    .list li + li { margin-top: 10px; }
+    .publication-list { margin: 0; padding: 0; list-style: none; counter-reset: papers; }
+    .publication-list li { position: relative; padding: 0 0 20px 42px; }
+    .publication-list li::before { counter-increment: papers; content: counter(papers, decimal-leading-zero); position: absolute; left: 0; top: 1px; color: var(--accent); font-size: 0.8rem; font-weight: 700; }
+    .publication-list li + li { padding-top: 20px; border-top: 1px solid var(--line); }
+    .publication-list li + li::before { top: 21px; }
+    .tag-list { display: flex; flex-wrap: wrap; gap: 9px; margin: 0; padding: 0; list-style: none; }
+    .tag-list li { padding: 6px 11px; background: var(--soft); border: 1px solid var(--line); border-radius: 3px; font-size: 0.9rem; }
+    .subsection + .subsection { margin-top: 36px; }
+    .subsection h3 { margin-bottom: 14px; color: var(--accent); }
+
+    footer { padding: 42px 0; color: var(--muted); }
+    .footer-row { display: flex; justify-content: space-between; gap: 24px; }
+
+    @media (max-width: 760px) {
+      header { position: static; }
+      nav, .footer-row { align-items: flex-start; flex-direction: column; }
+      .nav-links { gap: 12px 18px; }
+      .hero { padding: 60px 0; }
+      .hero-grid, .section-grid { grid-template-columns: 1fr; gap: 32px; }
+      main section { padding: 56px 0; }
+      .entry-head { flex-direction: column; gap: 4px; }
+    }
+
+    @media print {
+      header, .actions { display: none; }
+      .hero, main section { padding: 30px 0; }
+      .hero { background: none; }
+      a { color: inherit; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="container" aria-label="Main navigation">
+      <a class="brand" href="#top">Gouranga Duari</a>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#research">Research</a>
+        <a href="#teaching">Teaching</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div>
+          <p class="eyebrow">Academic · Researcher · Educator</p>
+          <h1 id="hero-title">Dr. Gouranga Duari</h1>
+          <p class="lead">Assistant Professor of Computer Science at UPES, working at the intersection of pattern recognition, outlier detection, machine learning, optimization, fintech, and topological data analysis.</p>
+          <div class="actions">
+            <a class="button primary" href="mailto:gourangaduari5@gmail.com">Get in touch</a>
+            <a class="button secondary" href="https://scholar.google.co.in/citations?user=SYbq8RwAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar</a>
+            <a class="button secondary" href="https://www.linkedin.com/in/gourangaduari1995/" target="_blank" rel="noopener">LinkedIn</a>
+          </div>
+        </div>
+        <ul class="quick-info" aria-label="Profile summary">
+          <li><strong>Current role</strong>Assistant Professor, School of Computer Science, UPES</li>
+          <li><strong>Highest degree</strong>Ph.D. in Computer Science and Technology, JNU</li>
+          <li><strong>Location</strong>Dehradun, India</li>
+          <li><strong>Research focus</strong>Outlier detection and pattern recognition</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container section-grid">
+        <h2>About</h2>
+        <div>
+          <p>I am an academic and researcher with a foundation in computer science, operations research, and mathematics. My work focuses on designing data-driven methods for outlier detection, financial analytics, and intelligent decision systems.</p>
+          <p class="muted">Alongside research, I teach core and applied computing courses, contribute to curriculum development, and support academic quality initiatives at UPES.</p>
+          <ul class="tag-list" aria-label="Research interests">
+            <li>Pattern Recognition</li><li>Outlier Detection</li><li>Machine Learning</li><li>Optimization</li><li>Fintech</li><li>Topological Data Analysis</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience">
+      <div class="container section-grid">
+        <h2>Experience</h2>
+        <div>
+          <article class="entry">
+            <div class="entry-head"><div><h3>Assistant Professor</h3><p class="meta">School of Computer Science, UPES · Dehradun, India</p></div><p class="meta">Jun 2024 - Present</p></div>
+            <ul class="list"><li>Teach computer science, data science, statistics, visualization, and NLP courses.</li><li>Serve as an IQAC member and contribute to syllabus design and modification.</li><li>Coordinate academic activities and mentor undergraduate student projects.</li></ul>
+          </article>
+          <article class="entry">
+            <div class="entry-head"><div><h3>Teaching Assistant</h3><p class="meta">School of Computer and Systems Sciences, Jawaharlal Nehru University</p></div></div>
+          </article>
+          <article class="entry">
+            <h3>Academic Service</h3>
+            <ul class="list"><li>Coordinator, one-week FDP on Effective Pedagogy, UPES, July-August 2025.</li><li>Session Co-Chair at ICMLDE 2024 and ICACSDF 2025.</li><li>Organizer of the UPES webinar “Unlocking Creativity: Power of Generative AI.”</li></ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="research">
+      <div class="container section-grid">
+        <h2>Research</h2>
+        <div>
+          <div class="subsection">
+            <h3>Selected Publications</h3>
+            <ol class="publication-list">
+              <li><strong>Decomposition for Outlier Detection Using Space Partitioning.</strong> <em>INFOCOMP Journal of Computer Science</em>, 23(1), 2024. <a href="https://infocomp.dcc.ufla.br/index.php/infocomp/article/view/3206" target="_blank" rel="noopener">View paper</a></li>
+              <li><strong>Leveraging Topological Data Analysis for Detecting Stock Market Crashes.</strong> 2025 OITS International Conference on Information Technology, IEEE. <a href="https://ieeexplore.ieee.org/abstract/document/11400357" target="_blank" rel="noopener">View paper</a></li>
+              <li><strong>Bull and Bear Phase Detection of BankNifty Using the Convolution of LSTM and ADF.</strong> International Conference on Smart Futuristic Technology, IEEE, 2026. <a href="https://ieeexplore.ieee.org/document/11506637" target="_blank" rel="noopener">View paper</a></li>
+              <li><strong>Attribute Subspace Partitioning with Neural Regression for Contextual Outlier Detection.</strong> <em>Procedia Computer Science</em>, 235, 1892-1902, 2024. <a href="https://doi.org/10.1016/j.procs.2024.04.180" target="_blank" rel="noopener">DOI</a></li>
+              <li><strong>Clustering for Global and Local Outliers.</strong> 4th International Conference on Machine Intelligence and Signal Processing, Springer, 2022. <a href="https://doi.org/10.1007/978-981-99-0085-5_49" target="_blank" rel="noopener">DOI</a></li>
+              <li><strong>Hierarchical Learning of Outliers.</strong> 5th International Conference on Communications and Cyber-Physical Engineering, Springer, 2022. <a href="https://doi.org/10.1007/978-981-19-8086-2_83" target="_blank" rel="noopener">DOI</a></li>
+            </ol>
+          </div>
+          <div class="subsection">
+            <h3>Current &amp; Forthcoming Work</h3>
+            <ul class="list"><li>NNODE: Nearest Neighbour for Outlier Detection Ensemble.</li><li>Vehicle detection in high-resolution aerial images using deep convolutional neural networks.</li><li>LSTM-driven corporate sentiment analysis of earnings calls for stock-price prediction.</li><li>TDA-based early warning signals for the likelihood of a stock-market crash.</li></ul>
+          </div>
+          <div class="subsection">
+            <h3>Books &amp; Chapters</h3>
+            <ul class="list"><li>Editor, <em>Quantum-Enabled Digital Twins: Foundations, Architectures, Applications, and Future Directions</em> (in press).</li><li>Editor, <em>Quantum Technologies in Heart-Machine Interfaces</em> (in press).</li><li>“Multi-Objective Optimization Using AI,” CRC Press, pp. 90-103.</li><li>“AIMedMind: A Federated Deep Learning Framework for Real-Time Glycemic Forecasting and Adaptive Insulin Dosing,” CRC Press, pp. 178-191.</li></ul>
+          </div>
+          <div class="subsection">
+            <h3>Patents</h3>
+            <ul class="list"><li>Multi-port Laptop Adapter · Design No. 447966-001</li><li>Smart Fitness Tracker with Advanced Multipurpose Health Features · Design No. 452135-001</li></ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="teaching">
+      <div class="container section-grid">
+        <h2>Teaching</h2>
+        <div>
+          <div class="subsection"><h3>Courses Taught</h3><ul class="tag-list"><li>Data Structures &amp; Algorithms</li><li>Computational Linguistics &amp; NLP</li><li>Problem Solving</li><li>Descriptive Analytics &amp; Visualization</li><li>Research Methodology</li><li>Applied Statistics &amp; Probability</li></ul></div>
+          <div class="subsection"><h3>Selected Projects</h3><ul class="list"><li>Machine-learning classification for heart-disease prediction.</li><li>LSTM-based stock-price prediction on time-series data.</li><li>Autoencoder-based outlier detection in credit-card data.</li></ul></div>
+          <div class="subsection"><h3>Technical Skills</h3><ul class="tag-list"><li>Python</li><li>Pandas</li><li>NumPy</li><li>scikit-learn</li><li>TensorFlow</li><li>Keras</li><li>PyOD</li><li>Matplotlib</li><li>Plotly</li><li>SQL</li><li>LaTeX</li></ul></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="education">
+      <div class="container section-grid">
+        <h2>Education</h2>
+        <div>
+          <article class="entry"><div class="entry-head"><div><h3>Ph.D., Computer Science and Technology</h3><p class="meta">Jawaharlal Nehru University, New Delhi</p></div><p class="meta">2020 - 2024</p></div></article>
+          <article class="entry"><div class="entry-head"><div><h3>M.Sc., Operations Research</h3><p class="meta">University of Delhi, New Delhi</p></div><p class="meta">2017 - 2019</p></div></article>
+          <article class="entry"><div class="entry-head"><div><h3>B.Sc. (Hons.), Mathematics</h3><p class="meta">Scottish Church College, University of Calcutta</p></div><p class="meta">2013 - 2016</p></div></article>
+          <article class="entry"><h3>Honors</h3><ul class="list"><li>Swami Vivekananda MCM Scholarship, Government of West Bengal, 2011.</li><li>Higher Education Scholarship, Government of India, 2012.</li></ul></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container section-grid">
+        <h2>Contact</h2>
+        <div>
+          <p>For research collaboration, academic opportunities, or student mentorship, feel free to get in touch.</p>
+          <p><strong>Email:</strong> <a href="mailto:gourangaduari5@gmail.com">gourangaduari5@gmail.com</a><br><strong>Phone:</strong> <a href="tel:+918967436095">+91 89674 36095</a><br><strong>Affiliation:</strong> School of Computer Science, UPES, Dehradun, India</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-row"><span>© 2026 Dr. Gouranga Duari</span><span><a href="https://www.linkedin.com/in/gourangaduari1995/" target="_blank" rel="noopener">LinkedIn</a> · <a href="https://scholar.google.co.in/citations?user=SYbq8RwAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar</a></span></div>
+  </footer>
+</body>
+</html>
